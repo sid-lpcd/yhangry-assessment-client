@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.setmenu__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: start;
+}
+
+.filters {
+  @include flex(center, start);
+  flex-direction: column;
+  gap: 5px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: start;
+  }
+}
+.filter-tags {
+  @include flex(start);
+  flex-wrap: wrap;
+  gap: 10px;
+}

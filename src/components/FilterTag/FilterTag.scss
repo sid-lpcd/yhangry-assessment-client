@@ -1,0 +1,21 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.filter-tags__tag {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: $primary-background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &--active {
+    background-color: $secondary-background-color;
+    color: $secondary-color;
+    border-color: $secondary-background-color;
+  }
+}
