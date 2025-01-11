@@ -1,8 +1,12 @@
-import { useState } from "react";
 import "./App.scss";
+import SetMenu from "./pages/SetMenu/SetMenu";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <SetMenu />
+    </>
+  );
 }
 
 export default App;
