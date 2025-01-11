@@ -21,9 +21,8 @@ const SetMenu = () => {
       setMenus(response.data.setMenus);
       setFilters(response.data.filters);
       console.log(response.data);
-      console.log(filters);
 
-      setFilteredMenus(menus);
+      setFilteredMenus(response.data.setMenus);
     } catch (error) {}
   };
 
@@ -61,17 +60,14 @@ const SetMenu = () => {
       <section className="filters">
         <h2 className="filters__title">Filters</h2>
         <div className="filter-tags">
-          {filters.cuisines?.map((cuisine) => {
-            console.log(filters);
-            return (
-              <FilterTag
-                key={uuidv4()}
-                filter={cuisine}
-                handleClick={handleFilterClick}
-                isActive={selectedFilters.includes(cuisine.name)}
-              />
-            );
-          })}
+          {filters.cuisines?.map((cuisine) => (
+            <FilterTag
+              key={uuidv4()}
+              filter={cuisine}
+              handleClick={handleFilterClick}
+              isActive={selectedFilters.includes(cuisine.name)}
+            />
+          ))}
         </div>
       </section>
       <section className="setmenus">
