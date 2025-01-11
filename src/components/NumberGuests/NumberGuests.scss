@@ -1,0 +1,31 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.guests {
+  @include flex(start);
+  gap: 10px;
+
+  &-controller {
+    @include flex(center);
+    gap: 10px;
+    background-color: $caption-color;
+    color: $primary-color;
+    border-radius: $border-radius;
+
+    &__button {
+      background-color: transparent;
+      border: 0px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    &__input {
+      width: 2rem;
+      text-align: center;
+      background-color: transparent;
+      border: 0px;
+      color: $primary-color;
+      font-size: 16px;
+    }
+  }
+}

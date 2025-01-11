@@ -27,7 +27,10 @@ const SetMenu = () => {
   return (
     <main>
       <h1>Set Menus</h1>
-      <NumberGuests />
+      <NumberGuests
+        numberGuests={numberGuests}
+        setNumberGuests={setNumberGuests}
+      />
       <section>
         <h2>Filters</h2>
         {filters?.cuisines?.map((cuisine) => (
